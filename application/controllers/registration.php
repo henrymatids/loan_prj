@@ -15,6 +15,6 @@ class Registration extends CI_controller
 	public function index()
 	{
 		// echo "<h1>Testing</h1>";
-		$this->load->view('registration');
+		$this->load->view('home');
 	}
 }
