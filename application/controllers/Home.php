@@ -4,7 +4,7 @@
 */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Registration extends CI_controller
+class Home extends CI_controller
 {
 	
 	public function __construct()
@@ -14,7 +14,6 @@ class Registration extends CI_controller
 
 	public function index()
 	{
-		// echo "<h1>Testing</h1>";
 		$this->load->view('home');
 	}
 }
