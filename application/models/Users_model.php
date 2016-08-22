@@ -1,5 +1,4 @@
 <?php
-
 class Users_model extends CI_model
 {
 	protected $table = "users";
@@ -9,8 +8,17 @@ class Users_model extends CI_model
 		return $this->db->insert($this->table, $data);
 	}
 
-	public function retrieve($data)
+	public function retrieve($firstname=FALSE, $middlename=FALSE, $lastname=FALSE)
 	{
+		if($firstname){
+			$this->db->where('firstname =',$firstname);
+		}
+		if($middlename){
+			$this->db->where('middlename =',$middlename);
+		}
+		if($lastname){
+			$this->db->where('lastname =',$lastname);
+		}
 		return $this->db->get($this->table)->result_array();
 	}
 
@@ -20,7 +28,7 @@ class Users_model extends CI_model
 	}
 
 	public function delete($data)
-	{
+	{	
 		return $this->db->delete($this->table, $data);
 	}	
 }
