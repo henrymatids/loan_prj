@@ -22,13 +22,12 @@ class Users_model extends CI_model
 		return $this->db->get($this->table)->result_array();
 	}
 
-	public function update($data)
-	{
-		return $this->db->update($this->table,$data);
-	}
+	public function validate($data)
+	{// 	1. The field name - the exact name you’ve given the form field.
+	// 		2. A “human” name for this field, which will be inserted into the error message. For example, if your field is named “user” you might give it a human name of “Username”.
+	// 		3. The validation rules for this form field.
+	// 		4. (optional) Set custom error messages on any rules given for current field. If not provided will use the default one.
 
-	public function delete($data)
-	{	
-		return $this->db->delete($this->table, $data);
+		// $this->form_validation->set_rules('param1','param2','param3','param4');
 	}	
 }
